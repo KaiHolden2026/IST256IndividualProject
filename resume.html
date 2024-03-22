@@ -2,9 +2,123 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Zakai Holden</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/resources/styles/styles.css">
 </head>
 <body>
+<header>
+    <a href="index.html">
+        <img src="/resources/images/ll.png" width="150"
+             height="150"alt="logo" class="logo">
+    </a>
 
+    <nav>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a class="nav-link active" href="education.html"> Education</a></li>
+            <li class="nav-item"><a class="nav-link active" href="experience.html"> Experience</a></li>
+            <li class="nav-item"><a class="nav-link active" href="gallery.html"> Project Gallery</a></li>
+            <li class="nav-item"><a class="nav-link active" href="resume.html"> Resume</a></li>
+            <li class="nav-item"><a class="nav-link active" href="weblinks.html"> Links</a></li>
+        </ul>
+    </nav>
+</header>
+<br>
+
+<div class="content">
+    <div class="sidebar">
+        <br>
+        <h2>Contact me</h2>
+        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{{YOUR FORM ID HERE}}" method="post">
+            <fieldset id="fs-frm-inputs">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" class="form-control" name="name" id="full-name" placeholder="First and Last" required="">
+                </div>
+                <div class="form-group">
+                    <label for="email-address">Email Address</label>
+                    <input type="email" class="form-control" name="_replyto" id="email-address" placeholder="sample@email.com" required="">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" rows="5" name="message" id="message" placeholder="Your Message" required=""></textarea>
+                </div>
+                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <hr>
+        <div id="apiDisplay"></div>
+        <script>
+            const div = document.getElementById('apiDisplay');
+            const url = 'https://icanhazdadjoke.com/';
+
+            const headers = new Headers({
+                'Accept': 'application/json'
+            });
+
+            fetch(url, {headers}) .then((response) => {
+                return response.json();
+            })
+                .then((data) => {
+                    console.log(data)
+                })
+                .catch(function (error) {
+                    console.log(error)
+                });
+        </script>
+
+
+    </div>
+    <div class="displayContent">
+        <h1>Resume</h1>
+        <p>Zakai Holden
+            (804) 300-9163 | zih5094@psu.edu
+            EDUCATION
+            The Pennsylvania State University- Bunton Waller Scholar State College, PA
+            B.S., Cybersecurity Analytics and Operations Expected Graduation- May 2026
+            GPA: 3.5
+            Experience
+            Penn State University IT Department State College, PA
+            IT Support Specialist September 2023 – Present
+             Analyze customer’s technology issues with software or hardware to identify solutions, manage student accounts to resolve issues
+            with reset passwords and resolve two-factor authentication. Help ensure seamless operations across all 20 Penn State Campuses.
+            Securitas Ashburn, VA
+            Oracle Data Center Security Officer May 2023 – August 2023
+             Monitored and controlled access to the facility, ensuring the protection and confidentiality of sensitive information. Conducted
+            hourly security patrols, implemented strict protocols, and responded to any security breaches or incidents.
+            Resident Assistant- Penn State East Dorms August 2023-Present
+             Facilitate Collaborate with a staff of 14 to cultivate an enriching educational environment by driving community development,
+            providing academic support, planning programs, ensuring safety, and offering role modeling.
+            Skills & Languages
+             Java, Python, Linux, HTML, SQL, Cybersecurity Fundamentals, Network Security, Wireshark, Problem-Solving, Collaboration
+            College Coursework
+            Information technology and Cyber course classes completed August 2022-Present
+             CYBER 262- Cyber defense, IST 220-Computer networking, IST 242- Intermediate App Dev, CYBER 100- Computer Systems
+            Literacy, IST 210- SQL, SRA 211- Terrorism and Crime, SRA 111- Security Risk Analysis
+             Advanced in writing queries, creating databases and tables, and manipulating data. Comfortable working with Linux systems and
+            configuring servers. Experienced in working in groups and comfortable working both independently and in a team environment.
+            Projects
+            IST 220- Networking April 2023
+             Developed a secure, 12-site hospital network design, seamlessly integrating cybersecurity and networking protocols to safeguard
+            critical patient data and operations for a company. This project underscores my expertise in computer networking and
+            cybersecurity, demonstrating a proven track record in crafting resilient solutions for complex environments.
+            Leadership
+            Information Science and Technology Undergraduate Student Council – Treasurer October 2022-Present
+             Entrusted with managing the financial affairs of the council which supports 2,100 students.
+             Ensured that funds were allocated efficiently to support various initiatives, events, and projects within the College of IST.
+            Certifications
+            Microsoft Office Specialist-Word, PowerPoint, Excel Aldie, VA
+            MOS 2020 – 2021
+             Advanced in Microsoft Word, adept at creating and managing presentations, and skilled in creating and managing workbooks.</p>
+
+    </div>
+</div>
+<footer>
+    <a href="https://www.linkedin.com/in/zakaiholden/">LinkedIn</a>
+    <p>Zakai Holden <br> 5752 Amelia Springs Cir Haymarket, VA <br> (804) 300-9163 <br> zih5094@psu.edu</p>
+    <p>&COPY; Copyright 2024</p>
+</footer>
 </body>
 </html>
